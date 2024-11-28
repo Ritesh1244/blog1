@@ -6,7 +6,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
-    'plugin:next/recommended', // Added for Next.js
+    'plugin:next/recommended', // Ensuring Next.js plugin is included
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -17,7 +17,7 @@ module.exports = {
   },
   plugins: [
     'react',
-    'next', // Added for Next.js
+    'next', // Adding next plugin to the list
   ],
   rules: {
     'jsx-a11y/label-has-associated-control': 0,

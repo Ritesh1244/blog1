@@ -6,6 +6,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'plugin:next/recommended', // Added for Next.js
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -16,6 +17,7 @@ module.exports = {
   },
   plugins: [
     'react',
+    'next', // Added for Next.js
   ],
   rules: {
     'jsx-a11y/label-has-associated-control': 0,
@@ -29,11 +31,11 @@ module.exports = {
     'max-len': [
       'error',
       {
-        code: 300, // Increased max line length
-        ignoreComments: true, // Ignore long comments
-        ignoreStrings: true, // Ignore long strings
-        ignoreTemplateLiterals: true, // Ignore template literals
-        ignoreRegExpLiterals: true, // Ignore regular expressions
+        code: 300,
+        ignoreComments: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreRegExpLiterals: true,
       },
     ],
     'no-multiple-empty-lines': [
@@ -69,20 +71,11 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
-        components: [
-          'Link',
-        ],
-        specialLink: [
-          'to',
-          'hrefLeft',
-          'hrefRight',
-        ],
-        aspects: [
-          'noHref',
-          'invalidHref',
-          'preferButton',
-        ],
+        components: ['Link'],
+        specialLink: ['to', 'hrefLeft', 'hrefRight'],
+        aspects: ['noHref', 'invalidHref', 'preferButton'],
       },
     ],
+    'no-trailing-spaces': 'error', // Ensure trailing spaces are not allowed
   },
 };

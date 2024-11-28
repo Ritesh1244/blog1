@@ -27,8 +27,14 @@ module.exports = {
     'react/state-in-constructor': 0,
     'import/prefer-default-export': 0,
     'max-len': [
-      2,
-      250,
+      'error',
+      {
+        code: 300, // Increased max line length
+        ignoreComments: true, // Ignore long comments
+        ignoreStrings: true, // Ignore long strings
+        ignoreTemplateLiterals: true, // Ignore template literals
+        ignoreRegExpLiterals: true, // Ignore regular expressions
+      },
     ],
     'no-multiple-empty-lines': [
       'error',
